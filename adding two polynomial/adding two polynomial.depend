@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1445412757 source:d:\codeblocks program\adding two polynomial\main.c
+	<stdio.h>
+	<conio.h>
+	<stdlib.h>
+
