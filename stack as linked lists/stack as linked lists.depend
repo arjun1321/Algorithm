@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1444121071 source:d:\codeblocks program\stack as linked lists\main.c
+	<stdio.h>
+	<stdlib.h>
+
