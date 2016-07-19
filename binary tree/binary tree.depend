@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1445266506 source:d:\codeblocks program\binary tree\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
