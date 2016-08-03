@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1470198872 source:c:\users\arjun kumar\desktop\algorithms\nicearchess\main.cpp
+	<iostream>
+	<stdio.h>
+
