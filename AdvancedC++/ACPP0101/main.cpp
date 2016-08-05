@@ -21,6 +21,10 @@ class Employee {
             pay = payRate;
         }
 
+        ~Employee() {
+        // free allocated resources
+        }
+
         string getName() {
 
             return name;
@@ -59,12 +63,19 @@ private:
     bool salaried;
 
 public:
+
+    // default constructor
+    Manager() : salaried(true) { };
+
     Manager(string name, double payRate, bool isSalaried)
             : Employee(name, payRate) // calling base class constructor.
             {
                 salaried = isSalaried;
             }
 
+    ~Manager() {
+        // free allocated resources
+    }
             bool getSalaried() {
                 return salaried;
             }
