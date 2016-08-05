@@ -69,9 +69,29 @@ public:
                 return salaried;
             }
 
-            double grossPay() {
-                return pay;
+            double grossPay(int hours) {
+                if(salaried) {
+                    return pay;
+                } else {
+                    return pay*hours;
+                }
             }
+
+            string toString() {
+                stringstream stm;
+                string salary;
+                if(salaried) {
+
+                    salary = "Salaried";
+                } else {
+                    salary = "Hourly";
+                }
+
+                stm << name << ": " << pay << ": " << salary << endl;
+                return stm.str();
+            }
+
+
 
 };
 
@@ -82,10 +102,8 @@ int main()
     cout << "Employee pay rate: " << emp1.getPay() << endl;
     cout << "Employee gross pay: " << emp1.grossPay(40) << endl;
     Manager emp2("Bob Brown", 1500, true);
-    cout << "Employee name: " << emp2.getName() << endl;
-    cout << "Employee payRate: " << emp2.getPay() << endl;
-    cout << "Emp2 Salaried? " << emp2.getSalaried() << endl;
-    cout << "Employee gross pay: " << emp2.grossPay() << endl;
+    cout << emp2.toString();
+    cout << "emp2's gross pay: " << emp2.grossPay(100);
 
 
     return 0;
