@@ -6,7 +6,7 @@ using namespace std;
 // Base class
 class Employee {
 
-    private:
+    protected:
         string name;
         double pay;
     public:
@@ -44,6 +44,10 @@ class Employee {
             return stm.str();
         }
 
+        double grossPay(int hours) {
+            return pay * hours;
+        }
+
 
 };
 
@@ -65,6 +69,10 @@ public:
                 return salaried;
             }
 
+            double grossPay() {
+                return pay;
+            }
+
 };
 
 int main()
@@ -72,10 +80,13 @@ int main()
     Employee emp1("Mary Smith", 15.00);
     cout << "Employee name: " << emp1.getName() << endl;
     cout << "Employee pay rate: " << emp1.getPay() << endl;
+    cout << "Employee gross pay: " << emp1.grossPay(40) << endl;
     Manager emp2("Bob Brown", 1500, true);
     cout << "Employee name: " << emp2.getName() << endl;
     cout << "Employee payRate: " << emp2.getPay() << endl;
     cout << "Emp2 Salaried? " << emp2.getSalaried() << endl;
+    cout << "Employee gross pay: " << emp2.grossPay() << endl;
+
 
     return 0;
 }
